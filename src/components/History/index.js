@@ -9,7 +9,7 @@ const History = () => {
 
 
 
-    // Getting calculator history from Database by using axios get api
+    // Getting calculator history from Backend by using axios get api
     useEffect(() => {
         axios.get("http://localhost:3001/history")
             .then((res) => {
@@ -38,13 +38,6 @@ const History = () => {
     // Performing the axios delete api for  deleting all calculator history 
     function onDeleteHistory() {
         setVerify(true)
-        // axios.delete("http://localhost:3001/history/")
-        //     .then((res) => {
-        //         setSavedCalc([])
-        //     })
-        //     .catch((err) => {
-        //         console.log(err)
-        //     })
     }
 
     function onVerifyClose(result) {

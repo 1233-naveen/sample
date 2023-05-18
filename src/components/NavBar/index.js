@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Nav } from 'react-bootstrap'
+import {NavLink} from 'react-router-dom'
 
 const NavBar = () => {
     return (
@@ -16,10 +17,13 @@ const NavBar = () => {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav ms-auto gap-3" >
-                            {/* <a className="nav-link active" aria-current="page" href="history">History</a> */}
-                            <Link to="/" style={{ textDecoration: 'none', fontSize: 20 }}>Calculator</Link>
-                            <Link to='history' style={{ textDecoration: 'none', fontSize: 20 }} >History</Link>
+                       
+                            <Nav.Link as={NavLink} to="/"  style={{ textDecoration: 'none', fontSize: 20 }}>Calculator</Nav.Link>
+                            <Nav.Link as={NavLink}  to='history'  style={{ textDecoration: 'none', fontSize: 20 }} >History</Nav.Link>
+                        
+                         
                         </div>
+
                     </div>
                 </div>
             </nav>

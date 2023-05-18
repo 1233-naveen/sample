@@ -20,6 +20,7 @@ const Calculator = () => {
   const [operator, setOperator] = useState('')
   const [result, setResult] = useState('')
   const [isB, setB] = useState(false)
+  
 
 
   //Convert our inputs into float values and done arithematic operations

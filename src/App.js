@@ -7,6 +7,7 @@ import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import Layout from './pages';
 import History from './components/History';
+import PageNotFound from './components/PageNotFound';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/' element={<Layout/>}>
             <Route index element={<Calculator/>}/>
             <Route path='/history' element={<History/>}/>
+            <Route path='*' element={<PageNotFound/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
